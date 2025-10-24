@@ -10,9 +10,15 @@ import youthCamp4 from "@/assets/youth-camp-4.png";
 import youthCamp5 from "@/assets/youth-camp-5.png";
 import youthCamp6 from "@/assets/youth-camp-6.png";
 import youthCamp7 from "@/assets/youth-camp-7.png";
-import youthCamp8 from "@/assets/youth-camp-8.png";
-import youthCamp9 from "@/assets/youth-camp-9.png";
-import youthCamp10 from "@/assets/youth-camp-10.png";
+import youthCamp8 from "@/assets/youth-camp-8.jpg";
+import youthCamp9 from "@/assets/youth-camp-9.jpg";
+import youthCamp10 from "@/assets/youth-camp-10.jpg";
+import youthCamp11 from "@/assets/youth-camp-11.jpg";
+import youthCamp12 from "@/assets/youth-camp-12.jpg";
+import youthCamp13 from "@/assets/youth-camp-13.jpg";
+import youthCamp14 from "@/assets/youth-camp-14.jpg";
+import youthCamp15 from "@/assets/youth-camp-15.jpg";
+import youthCamp16 from "@/assets/youth-camp-16.jpg";
 import youthCampVideo1 from "@/assets/youth-camp-video-1.mp4";
 import youthCampVideo2 from "@/assets/youth-camp-video-2.mp4";
 import youthCampVideo3 from "@/assets/youth-camp-video-3.mp4";
@@ -33,6 +39,12 @@ const Media = () => {
     { type: "image" as const, src: youthCamp8, alt: "Youth Camp 2025 - Teaching Session" },
     { type: "image" as const, src: youthCamp9, alt: "Youth Camp 2025 - Group Ministry" },
     { type: "image" as const, src: youthCamp10, alt: "Youth Camp 2025 - Outdoor Fellowship" },
+    { type: "image" as const, src: youthCamp11, alt: "Youth Camp 2025 - Food Preparation" },
+    { type: "image" as const, src: youthCamp12, alt: "Youth Camp 2025 - Cooking Together" },
+    { type: "image" as const, src: youthCamp13, alt: "Youth Camp 2025 - Mealtime" },
+    { type: "image" as const, src: youthCamp14, alt: "Youth Camp 2025 - Food Ministry" },
+    { type: "image" as const, src: youthCamp15, alt: "Youth Camp 2025 - Worship Gathering" },
+    { type: "image" as const, src: youthCamp16, alt: "Youth Camp 2025 - Prayer Session" },
     { type: "video" as const, src: youthCampVideo1, alt: "Youth Camp 2025 - Video 1" },
     { type: "video" as const, src: youthCampVideo2, alt: "Youth Camp 2025 - Video 2" },
     { type: "video" as const, src: youthCampVideo3, alt: "Youth Camp 2025 - Video 3" },
@@ -84,11 +96,11 @@ const Media = () => {
                     View Gallery
                   </h3>
                   <p className="text-lg text-muted-foreground mb-4">
-                    {youthCampMedia.length} items (10 photos, 5 videos)
+                    {youthCampMedia.length} items (16 photos, 5 videos)
                   </p>
                   <div className="flex gap-2">
                     <span className="px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium">
-                      10 Photos
+                      16 Photos
                     </span>
                     <span className="px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-medium">
                       5 Videos
@@ -101,7 +113,7 @@ const Media = () => {
 
           {/* Thumbnail Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8">
-            {youthCampMedia.slice(0, 10).map((item, index) => (
+            {youthCampMedia.filter(item => item.type === "image").map((item, index) => (
               <div
                 key={index}
                 className="aspect-square cursor-pointer overflow-hidden rounded-lg group hover:shadow-lg transition-shadow"
