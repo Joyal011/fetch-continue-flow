@@ -13,6 +13,11 @@ import youthCamp7 from "@/assets/youth-camp-7.png";
 import youthCamp8 from "@/assets/youth-camp-8.png";
 import youthCamp9 from "@/assets/youth-camp-9.png";
 import youthCamp10 from "@/assets/youth-camp-10.png";
+import youthCampVideo1 from "@/assets/youth-camp-video-1.mp4";
+import youthCampVideo2 from "@/assets/youth-camp-video-2.mp4";
+import youthCampVideo3 from "@/assets/youth-camp-video-3.mp4";
+import youthCampVideo4 from "@/assets/youth-camp-video-4.mp4";
+import youthCampVideo5 from "@/assets/youth-camp-video-5.mp4";
 
 const Media = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
@@ -28,6 +33,11 @@ const Media = () => {
     { type: "image" as const, src: youthCamp8, alt: "Youth Camp 2025 - Teaching Session" },
     { type: "image" as const, src: youthCamp9, alt: "Youth Camp 2025 - Group Ministry" },
     { type: "image" as const, src: youthCamp10, alt: "Youth Camp 2025 - Outdoor Fellowship" },
+    { type: "video" as const, src: youthCampVideo1, alt: "Youth Camp 2025 - Video 1" },
+    { type: "video" as const, src: youthCampVideo2, alt: "Youth Camp 2025 - Video 2" },
+    { type: "video" as const, src: youthCampVideo3, alt: "Youth Camp 2025 - Video 3" },
+    { type: "video" as const, src: youthCampVideo4, alt: "Youth Camp 2025 - Video 4" },
+    { type: "video" as const, src: youthCampVideo5, alt: "Youth Camp 2025 - Video 5" },
   ];
 
   return (
@@ -74,14 +84,14 @@ const Media = () => {
                     View Gallery
                   </h3>
                   <p className="text-lg text-muted-foreground mb-4">
-                    {youthCampMedia.length} photos and videos
+                    {youthCampMedia.length} items (10 photos, 5 videos)
                   </p>
                   <div className="flex gap-2">
                     <span className="px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium">
-                      Photos
+                      10 Photos
                     </span>
                     <span className="px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-medium">
-                      Videos (Coming Soon)
+                      5 Videos
                     </span>
                   </div>
                 </div>
