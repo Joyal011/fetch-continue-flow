@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MediaGallery from "@/components/MediaGallery";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import youthCamp1 from "@/assets/youth-camp-1.png";
 import youthCamp2 from "@/assets/youth-camp-2.png";
 import youthCamp3 from "@/assets/youth-camp-3.png";
@@ -27,6 +28,7 @@ import youthCampVideo5 from "@/assets/youth-camp-video-5.mp4";
 
 const Media = () => {
   const [galleryOpen, setGalleryOpen] = useState(false);
+  const [filter, setFilter] = useState<"all" | "photos" | "videos">("all");
 
   const youthCampMedia = [
     { type: "image" as const, src: youthCamp1, alt: "Youth Camp 2025 - Group Prayer" },
@@ -52,6 +54,12 @@ const Media = () => {
     { type: "video" as const, src: youthCampVideo5, alt: "Youth Camp 2025 - Video 5" },
   ];
 
+  const filteredMedia = youthCampMedia.filter(item => {
+    if (filter === "photos") return item.type === "image";
+    if (filter === "videos") return item.type === "video";
+    return true;
+  });
+
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
@@ -71,13 +79,38 @@ const Media = () => {
       {/* Youth Camp 2025 Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
-          <div className="mb-12">
+          <div className="mb-8">
             <h2 className="text-4xl font-bold mb-4 text-foreground font-heading">
               Youth Camp 2025
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-6">
               A transformative experience of worship, learning, and fellowship for our youth
             </p>
+            
+            {/* Filter Buttons */}
+            <div className="flex gap-3 flex-wrap">
+              <Button
+                variant={filter === "all" ? "default" : "outline"}
+                onClick={() => setFilter("all")}
+                className="transition-all"
+              >
+                All ({youthCampMedia.length})
+              </Button>
+              <Button
+                variant={filter === "photos" ? "default" : "outline"}
+                onClick={() => setFilter("photos")}
+                className="transition-all"
+              >
+                Photos ({youthCampMedia.filter(item => item.type === "image").length})
+              </Button>
+              <Button
+                variant={filter === "videos" ? "default" : "outline"}
+                onClick={() => setFilter("videos")}
+                className="transition-all"
+              >
+                Videos ({youthCampMedia.filter(item => item.type === "video").length})
+              </Button>
+            </div>
           </div>
 
           <Card 
@@ -113,17 +146,33 @@ const Media = () => {
 
           {/* Thumbnail Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-8">
-            {youthCampMedia.filter(item => item.type === "image").map((item, index) => (
+            {filteredMedia.map((item, index) => (
               <div
                 key={index}
-                className="aspect-square cursor-pointer overflow-hidden rounded-lg group hover:shadow-lg transition-shadow"
+                className="aspect-square cursor-pointer overflow-hidden rounded-lg group hover:shadow-lg transition-shadow relative"
                 onClick={() => setGalleryOpen(true)}
               >
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+                {item.type === "image" ? (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                ) : (
+                  <>
+                    <video
+                      src={item.src}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
+                      <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -131,7 +180,7 @@ const Media = () => {
       </section>
 
       <MediaGallery
-        items={youthCampMedia}
+        items={filteredMedia}
         open={galleryOpen}
         onClose={() => setGalleryOpen(false)}
       />
