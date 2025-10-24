@@ -35,40 +35,70 @@ const Media = () => {
             </p>
           </div>
 
-          {/* Youth Camp 2025 Card */}
-          <Card 
-            className="cursor-pointer overflow-hidden group hover:shadow-2xl transition-all duration-300"
-            onClick={() => navigate("/youth-camp-2025")}
-          >
-            <div className="relative h-[500px]">
-              <img
-                src={youthCampPoster}
-                alt="Youth Camp 2025 - God & Me"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-8 w-full">
-                  <h3 className="text-3xl font-bold text-foreground mb-2 font-heading">
-                    Youth Camp 2025
-                  </h3>
-                  <p className="text-xl text-muted-foreground mb-4 italic">
-                    "God & Me" - A weekend to grow, connect, and have fun!
-                  </p>
-                  <div className="flex gap-2 mb-4">
-                    <span className="px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium">
-                      Oct 20-22, 2025
-                    </span>
-                    <span className="px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-medium">
-                      Dhadgaun, Nagarkot
-                    </span>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Youth Camp 2025 Card */}
+            <Card 
+              className="cursor-pointer overflow-hidden group hover:shadow-2xl transition-all duration-300"
+              onClick={() => navigate("/youth-camp-2025")}
+            >
+              <div className="relative h-[400px]">
+                <img
+                  src={youthCampPoster}
+                  alt="Youth Camp 2025 - God & Me"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-6 w-full">
+                    <h3 className="text-2xl font-bold text-foreground mb-2 font-heading">
+                      Youth Camp 2025
+                    </h3>
+                    <p className="text-lg text-muted-foreground mb-3 italic">
+                      "God & Me"
+                    </p>
+                    <div className="flex gap-2 mb-3">
+                      <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-medium">
+                        Oct 20-22, 2025
+                      </span>
+                      <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-xs font-medium">
+                        Nagarkot
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      View full details and gallery →
+                    </p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Click to view full details and gallery →
-                  </p>
                 </div>
               </div>
-            </div>
-          </Card>
+            </Card>
+
+            {/* Upcoming Youth Camp 2026 Card */}
+            <Card 
+              className="overflow-hidden group hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative h-[400px] bg-gradient-to-br from-primary/20 to-accent/20">
+                <div className="absolute inset-0 flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-foreground mb-4 font-heading">
+                      Youth Camp 2026
+                    </h3>
+                    <p className="text-xl text-muted-foreground mb-6">
+                      Coming Soon
+                    </p>
+                    <div className="space-y-3">
+                      <p className="text-lg text-muted-foreground">
+                        Stay tuned for details about our next youth camp
+                      </p>
+                      <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                        <p className="text-sm font-medium text-primary">
+                          Dates to be announced
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
 
