@@ -59,20 +59,34 @@ const Contact = () => {
         <div className="mb-16">
           <div className="max-w-4xl mx-auto mb-8 text-center">
             <h3 className="text-2xl font-semibold mb-2">Our Location</h3>
-            <p className="text-lg text-muted-foreground">M867+FR4, Lalitpur 44700</p>
+            <p className="text-lg text-muted-foreground">Bishram Church, Thasikhel, Lalitpur</p>
+            <p className="text-sm text-muted-foreground">M867+FR4, Lalitpur 44700</p>
           </div>
           <div className="max-w-5xl mx-auto animate-fade-up">
             <div className="rounded-2xl overflow-hidden shadow-2xl h-[400px] md:h-[500px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5!2d85.314!3d27.661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM5JzM5LjYiTiA4NcKwMTgnNTAuNCJF!5e0!3m2!1sen!2snp!4v1234567890"
+                src="https://www.google.com/maps?q=27.6614,85.3140&hl=en&z=15&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bishram Church Location"
+                title="Bishram Church Location - Thasikhel, Lalitpur"
               />
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=27.6614,85.3140&query_place_id=ChIJBishram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline inline-flex items-center gap-2"
+              >
+                <span>View on Google Maps</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
