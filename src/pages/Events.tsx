@@ -21,13 +21,6 @@ const Events = () => {
       time: "10:00 AM",
       location: "Bishram Church, Thasikhel",
       description: "Join us every Saturday for worship, prayer, and biblical teaching."
-    },
-    {
-      title: "Youth Fellowship",
-      date: "Every Friday",
-      time: "6:00 PM",
-      location: "Bishram Church, Thasikhel",
-      description: "A time for young people to connect, share, and grow together in faith."
     }
   ];
 
