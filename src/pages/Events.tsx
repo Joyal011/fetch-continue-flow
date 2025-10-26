@@ -8,19 +8,19 @@ import { Link } from "react-router-dom";
 const Events = () => {
   const upcomingEvents = [
     {
-      title: "Youth Camp 2025",
-      date: "January 15-20, 2025",
-      time: "All Day",
-      location: "Bishram Church Campus",
+      title: "Youth Camp 2026",
+      date: "Coming Soon",
+      time: "TBA",
+      location: "Location TBA",
       description: "Join us for an incredible week of worship, fellowship, and spiritual growth designed specifically for youth.",
       link: "/youth-camp-2025"
     },
     {
-      title: "Sunday Worship Service",
-      date: "Every Sunday",
+      title: "Saturday Worship Service",
+      date: "Every Saturday",
       time: "10:00 AM",
       location: "Bishram Church, Thasikhel",
-      description: "Join us every Sunday for worship, prayer, and biblical teaching."
+      description: "Join us every Saturday for worship, prayer, and biblical teaching."
     },
     {
       title: "Youth Fellowship",

@@ -179,14 +179,14 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground">– Psalm 145:18</p>
             </div>
 
-            <div>
-              <h4 className="font-semibold mb-3">Office Hours</h4>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                <p>Saturday: 10:00 AM - 2:00 PM</p>
-                <p>Sunday: Closed (Worship Service at 10:00 AM)</p>
-              </div>
-            </div>
+                <div>
+                  <h4 className="font-semibold mb-3">Office Hours</h4>
+                  <div className="space-y-2 text-muted-foreground">
+                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: Closed (Worship Service at 10:00 AM)</p>
+                    <p>Sunday: 10:00 AM - 2:00 PM</p>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
