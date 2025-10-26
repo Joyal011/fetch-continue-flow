@@ -1,17 +1,17 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import NoticeDialog from "@/components/NoticeDialog";
+import About from "@/components/About";
 
-const Index = () => {
+const AboutPage = () => {
   return (
     <main className="min-h-screen">
-      <NoticeDialog />
       <Navigation />
-      <Hero />
+      <div className="pt-20">
+        <About />
+      </div>
       <Footer />
     </main>
   );
 };
 
-export default Index;
+export default AboutPage;

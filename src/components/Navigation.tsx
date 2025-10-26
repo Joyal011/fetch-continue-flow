@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@/assets/bishram-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,26 +13,12 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80; // Account for fixed navbar height
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
-
   const menuItems = [
     { label: "Home", path: "/", type: "link" },
     { label: "About", path: "/about", type: "link" },
     { label: "Events", path: "/events", type: "link" },
     { label: "Media", path: "/media", type: "link" },
-    { label: "Contact", id: "contact", type: "scroll" }
+    { label: "Contact", path: "/contact", type: "link" }
   ];
 
   return (
@@ -60,23 +45,13 @@ const Navigation = () => {
           {/* Menu Items */}
           <div className="hidden md:flex items-center gap-8">
             {menuItems.map((item) => (
-              item.type === "link" ? (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id!)}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
-                >
-                  {item.label}
-                </button>
-              )
+              <Link
+                key={item.path}
+                to={item.path}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -105,27 +80,14 @@ const Navigation = () => {
         {/* Mobile Menu */}
         <div id="mobile-menu" className="hidden md:hidden pb-4">
           {menuItems.map((item) => (
-            item.type === "link" ? (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => document.getElementById("mobile-menu")?.classList.add("hidden")}
-                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <button
-                key={item.id}
-                onClick={() => {
-                  scrollToSection(item.id!);
-                  document.getElementById("mobile-menu")?.classList.add("hidden");
-                }}
-                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </button>
-            )
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => document.getElementById("mobile-menu")?.classList.add("hidden")}
+              className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors"
+            >
+              {item.label}
+            </Link>
           ))}
         </div>
       </div>
