@@ -1,9 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Events = () => {
   const upcomingEvents = [
@@ -12,8 +10,7 @@ const Events = () => {
       date: "Coming Soon",
       time: "TBA",
       location: "Location TBA",
-      description: "Join us for an incredible week of worship, fellowship, and spiritual growth designed specifically for youth.",
-      link: "/youth-camp-2025"
+      description: "Join us for an incredible week of worship, fellowship, and spiritual growth designed specifically for youth."
     },
     {
       title: "Saturday Worship Service",
@@ -59,11 +56,6 @@ const Events = () => {
                       </div>
                     </div>
                     <p className="text-muted-foreground mb-6">{event.description}</p>
-                    {event.link && (
-                      <Link to={event.link}>
-                        <Button>Learn More</Button>
-                      </Link>
-                    )}
                   </CardContent>
                 </Card>
               ))}
