@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/bishram-logo.png";
+import logo from "@/assets/chosen-generation-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,7 +36,7 @@ const Navigation = () => {
             to="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img src={logo} alt="Bishram Church Logo" className="h-12 w-auto" />
+            <img src={logo} alt="Chosen Generation Logo" className="h-12 w-auto" />
             <span className="text-xl font-bold text-foreground hidden sm:block">
               Chosen Generation
             </span>

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-worship.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,8 +25,11 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-foreground">
             Chosen Generation
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light">
+          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 max-w-3xl mx-auto font-light">
             Empowering youth through faith, worship, and community
+          </p>
+          <p className="text-base md:text-lg text-muted-foreground/90 mb-8 max-w-2xl mx-auto italic">
+            "I will give them a heart to know me, that I am the Lord; they will be my people, and I will be their God, for they will return to me with all their heart." — Jeremiah 24:7
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -37,7 +43,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               className="text-lg px-8 py-6 hover:scale-105 transition-transform"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => navigate("/contact")}
             >
               Get in Touch
             </Button>
