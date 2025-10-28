@@ -20,10 +20,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-foreground">
-            Bishram Church
+            Chosen Generation
           </h1>
           <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto font-light">
-            A place of peace, faith, and fellowship
+            Empowering youth through faith, worship, and community
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

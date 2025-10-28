@@ -111,30 +111,6 @@ const ContactPage = () => {
               </Card>
 
               <div className="animate-fade-up space-y-8" style={{ animationDelay: "0.2s" }}>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-1">Email</h4>
-                        <p className="text-muted-foreground">info@bishramchurch.org</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-1">Phone</h4>
-                        <p className="text-muted-foreground">+977 1234567890</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="bg-secondary/50 rounded-2xl p-8">
                   <p className="text-muted-foreground italic mb-4">
                     "The Lord is near to all who call on him, to all who call on him in truth."
@@ -143,17 +119,8 @@ const ContactPage = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-3">Office Hours</h4>
-                  <div className="space-y-2 text-muted-foreground">
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p>Saturday: Closed (Worship Service at 10:00 AM)</p>
-                    <p>Sunday: 10:00 AM - 2:00 PM</p>
-                  </div>
-                </div>
-
-                <div>
                   <h4 className="font-semibold mb-3">Our Location</h4>
-                  <p className="text-muted-foreground">Bishram Church</p>
+                  <p className="text-muted-foreground">Chosen Generation at Bishram Church</p>
                   <p className="text-muted-foreground">Thasikhel, Lalitpur</p>
                   <p className="text-muted-foreground">M867+FR4, Lalitpur 44700</p>
                 </div>

@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Church Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Bishram Church</h3>
+            <h3 className="text-2xl font-bold mb-4">Chosen Generation</h3>
             <p className="text-muted-foreground mb-4">
-              A loving community where faith grows and hearts find rest.
+              The youth ministry of Bishram Church - empowering the next generation through faith and fellowship.
             </p>
             <p className="text-sm text-muted-foreground italic">
-              "Come to me, all you who are weary and burdened, and I will give you rest."
+              "Let no one despise you for your youth, but set the believers an example." - 1 Timothy 4:12
             </p>
           </div>
 
@@ -24,14 +24,6 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-muted-foreground">M867+FR4, Lalitpur 44700</span>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">info@bishramchurch.org</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">+977 1234567890</span>
-              </div>
             </div>
           </div>
 
@@ -40,7 +32,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100090456807762"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -49,22 +41,13 @@ const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/chosengeneration.nepal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-5 h-5" />
               </a>
             </div>
             <p className="text-muted-foreground mt-6 text-sm">
@@ -75,7 +58,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-muted-foreground text-sm mb-2">
-            © {new Date().getFullYear()} Bishram Church. All rights reserved.
+            © {new Date().getFullYear()} Chosen Generation. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm italic">
             "The Lord bless you and keep you; the Lord make his face shine on you." – Numbers 6:24-25

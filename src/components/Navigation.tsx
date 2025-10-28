@@ -38,7 +38,7 @@ const Navigation = () => {
           >
             <img src={logo} alt="Bishram Church Logo" className="h-12 w-auto" />
             <span className="text-xl font-bold text-foreground hidden sm:block">
-              Bishram Church
+              Chosen Generation
             </span>
           </Link>
 

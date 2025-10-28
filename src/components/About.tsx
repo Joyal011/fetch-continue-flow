@@ -8,10 +8,10 @@ const About = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
-            About Bishram Church
+            About Chosen Generation
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A community united in faith, worship, and service
+            Empowering youth through faith, worship, and fellowship
           </p>
         </div>
 
@@ -21,13 +21,14 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Bishram Church is dedicated to spreading the love of Christ through worship, 
-              fellowship, and community service. We believe in creating a welcoming space 
-              where everyone can experience God's peace and grow in their faith journey.
+              Chosen Generation is the vibrant youth ministry of Bishram Church, dedicated to 
+              empowering the next generation to live bold, faith-filled lives. We create a 
+              dynamic space where young people can encounter God, build authentic relationships, 
+              and discover their purpose.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our church is committed to nurturing spiritual growth, supporting families, 
-              and empowering youth to live out their faith in meaningful ways.
+              Through worship, Bible study, community service, and fellowship, we equip youth 
+              to be ambassadors of Christ in their schools, families, and communities.
             </p>
           </div>
           <div className="rounded-lg overflow-hidden shadow-xl">
@@ -55,19 +56,19 @@ const About = () => {
               <Card className="p-4 bg-card hover:shadow-lg transition-shadow">
                 <h4 className="font-bold text-lg mb-2 text-foreground">Faith</h4>
                 <p className="text-muted-foreground">
-                  Rooted in biblical truth and growing in relationship with God
+                  Grounded in God's Word and passionate about worship
                 </p>
               </Card>
               <Card className="p-4 bg-card hover:shadow-lg transition-shadow">
                 <h4 className="font-bold text-lg mb-2 text-foreground">Fellowship</h4>
                 <p className="text-muted-foreground">
-                  Building genuine connections and supporting one another
+                  Creating authentic friendships and a supportive community
                 </p>
               </Card>
               <Card className="p-4 bg-card hover:shadow-lg transition-shadow">
-                <h4 className="font-bold text-lg mb-2 text-foreground">Service</h4>
+                <h4 className="font-bold text-lg mb-2 text-foreground">Purpose</h4>
                 <p className="text-muted-foreground">
-                  Making a positive impact in our community through love and action
+                  Living with intention and making a difference for Christ
                 </p>
               </Card>
             </div>
