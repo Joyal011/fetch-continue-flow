@@ -164,6 +164,43 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Team Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-foreground font-heading">
+              Our Team
+            </h2>
+            <div className="max-w-4xl mx-auto">
+              {/* Youth Leader */}
+              <div className="mb-12 text-center">
+                <Card className="p-8 bg-card hover:shadow-lg transition-shadow inline-block">
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">Youth Leader</h3>
+                  <p className="text-xl text-muted-foreground">Diplak Maharjan</p>
+                </Card>
+              </div>
+              
+              {/* Core Members */}
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Core Members</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Dhiraj Saru Magar</p>
+                  </Card>
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Suziena Maharjan</p>
+                  </Card>
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Jenisha Shrestha</p>
+                  </Card>
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Ester Ruchal</p>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Join Us Section */}
         <section className="py-16 px-4 bg-primary/5">
           <div className="container mx-auto text-center">
