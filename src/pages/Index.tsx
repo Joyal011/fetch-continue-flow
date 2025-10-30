@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import AboutPreview from "@/components/AboutPreview";
 import Footer from "@/components/Footer";
 import NoticeDialog from "@/components/NoticeDialog";
 
@@ -10,7 +10,7 @@ const Index = () => {
       <NoticeDialog />
       <Navigation />
       <Hero />
-      <About />
+      <AboutPreview />
       <Footer />
     </main>
   );

@@ -35,7 +35,7 @@ const Hero = () => {
             <Button
               size="lg"
               className="text-lg px-8 py-6 hover:scale-105 transition-transform"
-              onClick={() => scrollToSection("about")}
+              onClick={() => navigate("/about")}
             >
               Learn More
             </Button>
