@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
-import communityImage from "@/assets/community-fellowship.jpg";
-import peacefulImage from "@/assets/peaceful-nature.jpg";
+import missionImage from "@/assets/mission-worship.jpg";
+import valuesImage from "@/assets/values-community.jpg";
 
 const About = () => {
   return (
@@ -33,8 +33,8 @@ const About = () => {
           </div>
           <div className="rounded-lg overflow-hidden shadow-xl">
             <img 
-              src={communityImage} 
-              alt="Community fellowship at Bishram Church" 
+              src={missionImage} 
+              alt="Worship at Chosen Generation" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
@@ -43,8 +43,8 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="rounded-lg overflow-hidden shadow-xl order-2 md:order-1">
             <img 
-              src={peacefulImage} 
-              alt="Peaceful worship environment" 
+              src={valuesImage} 
+              alt="Community gathering at Chosen Generation" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
