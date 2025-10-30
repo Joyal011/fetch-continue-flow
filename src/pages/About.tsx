@@ -182,7 +182,7 @@ const AboutPage = () => {
               {/* Core Members */}
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-center text-foreground">Core Members</h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
                     <p className="text-lg font-semibold text-foreground">Dhiraj Saru Magar</p>
                   </Card>
@@ -194,6 +194,12 @@ const AboutPage = () => {
                   </Card>
                   <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
                     <p className="text-lg font-semibold text-foreground">Ester Ruchal</p>
+                  </Card>
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Surakshya Thapa Magar</p>
+                  </Card>
+                  <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
+                    <p className="text-lg font-semibold text-foreground">Sofiya Lamichane</p>
                   </Card>
                 </div>
               </div>
