@@ -7,11 +7,11 @@ const AboutPreview = () => {
   const navigate = useNavigate();
   
   return (
-    <section id="about" className="py-20 px-4 bg-muted/30">
+    <section id="about" className="py-20 px-4 bg-gradient-to-br from-muted/50 to-background">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-heading">
-            About Chosen Generation
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Chosen Generation</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Empowering youth through faith, worship, and fellowship
@@ -32,12 +32,12 @@ const AboutPreview = () => {
             <Button 
               size="lg" 
               onClick={() => navigate("/about")}
-              className="hover:scale-105 transition-transform"
+              className="shadow-elevated"
             >
               Learn More About Us
             </Button>
           </div>
-          <div className="rounded-lg overflow-hidden shadow-xl">
+          <div className="rounded-2xl overflow-hidden shadow-elevated hover:shadow-2xl transition-all duration-300">
             <img 
               src={missionImage} 
               alt="Worship at Chosen Generation" 
@@ -47,19 +47,28 @@ const AboutPreview = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
+          <Card className="p-8 bg-gradient-to-br from-card to-muted/30 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-primary/10">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary mb-4 flex items-center justify-center">
+              <span className="text-2xl text-white">✝️</span>
+            </div>
             <h4 className="font-bold text-xl mb-3 text-foreground">Faith</h4>
             <p className="text-muted-foreground">
               Grounded in God's Word and passionate about worship
             </p>
           </Card>
-          <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
+          <Card className="p-8 bg-gradient-to-br from-card to-muted/30 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-secondary/10">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-secondary to-accent mb-4 flex items-center justify-center">
+              <span className="text-2xl text-white">🤝</span>
+            </div>
             <h4 className="font-bold text-xl mb-3 text-foreground">Fellowship</h4>
             <p className="text-muted-foreground">
               Creating authentic friendships and a supportive community
             </p>
           </Card>
-          <Card className="p-6 bg-card hover:shadow-lg transition-shadow">
+          <Card className="p-8 bg-gradient-to-br from-card to-muted/30 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-accent/10">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary mb-4 flex items-center justify-center">
+              <span className="text-2xl text-white">🎯</span>
+            </div>
             <h4 className="font-bold text-xl mb-3 text-foreground">Purpose</h4>
             <p className="text-muted-foreground">
               Living with intention and making a difference for Christ

@@ -8,44 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Clean, minimal palette inspired by Renewal.City */
+    /* Vibrant, energetic palette for youth ministry */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 220 20% 15%;
 
-    /* Muted sage green primary */
-    --primary: 136 15% 55%;
+    /* Rich purple primary - energetic and spiritual */
+    --primary: 262 70% 50%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 80% 60%;
 
-    /* Light gray secondary */
-    --secondary: 0 0% 98%;
-    --secondary-foreground: 0 0% 10%;
+    /* Vibrant gradient secondary */
+    --secondary: 280 65% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 98%;
-    --muted-foreground: 0 0% 33%;
+    --muted: 240 10% 96%;
+    --muted-foreground: 220 15% 40%;
 
-    /* Sage green accent */
-    --accent: 136 15% 55%;
+    /* Bright accent for CTAs */
+    --accent: 340 75% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 140 14% 48%;
+    --border: 240 10% 90%;
+    --input: 240 10% 95%;
+    --ring: 262 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom design tokens */
-    --gradient-peaceful: linear-gradient(135deg, hsl(136 15% 55% / 0.1), hsl(0 0% 98%));
-    --shadow-soft: 0 4px 24px -4px hsl(0 0% 10% / 0.08);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Custom design tokens for modern, energetic feel */
+    --gradient-primary: linear-gradient(135deg, hsl(262 70% 50%), hsl(280 65% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 70% 50% / 0.95), hsl(280 65% 45% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 20% 98%));
+    --shadow-elevated: 0 10px 40px -10px hsl(262 70% 50% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(220 20% 15% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -65,33 +70,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 10%;
+    --background: 220 25% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 12%;
+    --card: 220 20% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 12%;
+    --popover: 220 20% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 136 15% 60%;
+    --primary: 262 75% 60%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 262 80% 70%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 280 70% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 136 15% 60%;
+    --accent: 340 80% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 140 14% 48%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 262 75% 60%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 98%;
