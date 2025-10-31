@@ -53,24 +53,14 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollToSection("about")}
-          className="text-muted-foreground hover:text-primary transition-colors"
-          aria-label="Scroll to about section"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
-        </button>
+        <div className="w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-2">
+          <div className="w-1 h-2 bg-white/70 rounded-full animate-pulse" />
+        </div>
       </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-20 left-10 w-24 h-24 border-4 border-white/10 rounded-full animate-pulse" />
+      <div className="absolute bottom-40 right-20 w-16 h-16 border-4 border-white/10 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
     </section>
   );
 };
