@@ -5,7 +5,7 @@ const Stats = () => {
   const stats = [
     {
       icon: Users,
-      value: "100+",
+      value: "50+",
       label: "Active Youth Members",
       color: "from-primary to-secondary"
     },
@@ -17,13 +17,13 @@ const Stats = () => {
     },
     {
       icon: Heart,
-      value: "5+",
+      value: "10+",
       label: "Years of Ministry",
       color: "from-accent to-primary"
     },
     {
       icon: Award,
-      value: "10+",
+      value: "6",
       label: "Core Team Members",
       color: "from-primary to-accent"
     }

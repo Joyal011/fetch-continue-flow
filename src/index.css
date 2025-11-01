@@ -18,20 +18,20 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 15%;
 
-    /* Rich purple primary - energetic and spiritual */
-    --primary: 262 70% 50%;
+    /* Softer purple primary - balanced and spiritual */
+    --primary: 262 45% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 262 80% 60%;
+    --primary-glow: 262 50% 55%;
 
-    /* Vibrant gradient secondary */
-    --secondary: 280 65% 45%;
+    /* Muted gradient secondary */
+    --secondary: 280 40% 40%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 240 10% 96%;
     --muted-foreground: 220 15% 40%;
 
-    /* Bright accent for CTAs */
-    --accent: 340 75% 55%;
+    /* Softer accent for CTAs */
+    --accent: 340 50% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
@@ -43,11 +43,11 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    /* Custom design tokens for modern, energetic feel */
-    --gradient-primary: linear-gradient(135deg, hsl(262 70% 50%), hsl(280 65% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(262 70% 50% / 0.95), hsl(280 65% 45% / 0.9));
+    /* Custom design tokens for modern, balanced feel */
+    --gradient-primary: linear-gradient(135deg, hsl(262 45% 45%), hsl(280 40% 40%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 45% 45% / 0.95), hsl(280 40% 40% / 0.9));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(240 20% 98%));
-    --shadow-elevated: 0 10px 40px -10px hsl(262 70% 50% / 0.3);
+    --shadow-elevated: 0 10px 40px -10px hsl(262 45% 45% / 0.3);
     --shadow-soft: 0 4px 20px -4px hsl(220 20% 15% / 0.1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -79,17 +79,17 @@ All colors MUST be HSL.
     --popover: 220 20% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 262 75% 60%;
+    --primary: 262 50% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 262 80% 70%;
+    --primary-glow: 262 55% 65%;
 
-    --secondary: 280 70% 55%;
+    --secondary: 280 45% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 20% 15%;
     --muted-foreground: 220 10% 70%;
 
-    --accent: 340 80% 60%;
+    --accent: 340 55% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
