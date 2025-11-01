@@ -1,9 +1,18 @@
 import { MapPin, Mail, Phone, Facebook, Instagram, Youtube } from "lucide-react";
+import footerBg from "@/assets/footer-bg.jpg";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5 border-t border-border py-12 md:py-16">
-      <div className="container mx-auto px-4">
+    <footer className="relative border-t border-border py-12 md:py-16 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${footerBg})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 mb-8">
           {/* Church Info */}
           <div>
