@@ -7,6 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
+});
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -15,24 +23,53 @@ const ContactPage = () => {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
+    try {
+      // Validate form data
+      const validatedData = contactSchema.parse(formData);
+
+      setIsSubmitting(true);
+
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_11x41qp", // Service ID
+        "template_aekb358", // Template ID
+        {
+          from_name: validatedData.name,
+          from_email: validatedData.email,
+          message: validatedData.message,
+          to_name: "Chosen Generation",
+        },
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+      );
+
       toast({
-        title: "Please fill in all fields",
-        variant: "destructive"
+        title: "Message sent!",
+        description: "We'll get back to you soon."
       });
-      return;
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Validation Error",
+          description: error.errors[0].message,
+          variant: "destructive"
+        });
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
     }
-
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you soon."
-    });
-
-    setFormData({ name: "", email: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -103,8 +140,8 @@ const ContactPage = () => {
                         className="w-full"
                       />
                     </div>
-                    <Button type="submit" className="w-full" size="lg">
-                      Send Message
+                    <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>
