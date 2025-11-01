@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import communityImage from "@/assets/community-fellowship.jpg";
+import communityImage from "@/assets/footer-bg.jpg";
 
 const CallToAction = () => {
   const navigate = useNavigate();

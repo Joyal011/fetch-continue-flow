@@ -5,18 +5,18 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Chosen Generation has transformed my faith journey. The worship, fellowship, and teachings have helped me grow closer to God and discover my purpose.",
-      author: "Sarah M.",
+      author: "Joel S.",
       role: "Youth Member"
     },
     {
       quote: "Being part of this community has given me lifelong friends and a deeper understanding of what it means to live for Christ. The leaders truly care about our spiritual growth.",
-      author: "David K.",
-      role: "Small Group Participant"
+      author: "Dhiraj S.",
+      role: "Core Member"
     },
     {
       quote: "Through the youth camps and events, I've experienced God's presence in powerful ways. This ministry has been instrumental in shaping who I am today.",
-      author: "Priya S.",
-      role: "Worship Team Member"
+      author: "Sanjay S.",
+      role: "Youth Member"
     }
   ];
 
