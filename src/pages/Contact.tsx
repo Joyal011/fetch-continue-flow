@@ -44,7 +44,7 @@ const ContactPage = () => {
           message: validatedData.message,
           to_name: "Chosen Generation",
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS public key
+        "bFSmcdkK2QNIRQHTX" // EmailJS public key
       );
 
       toast({
