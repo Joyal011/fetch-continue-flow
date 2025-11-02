@@ -6,12 +6,10 @@ import Ministries from "@/components/Ministries";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
-import NoticeDialog from "@/components/NoticeDialog";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
-      <NoticeDialog />
       <Navigation />
       <Hero />
       <Stats />
