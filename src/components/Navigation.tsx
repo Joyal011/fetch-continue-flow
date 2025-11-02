@@ -36,9 +36,9 @@ const Navigation = () => {
             to="/"
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img src={logo} alt="jjoel.com Logo" className="h-12 w-auto" />
+            <img src={logo} alt="Chosen Generation Logo" className="h-12 w-auto" />
             <span className="text-xl font-bold text-foreground hidden sm:block">
-              jjoel.com
+              Chosen Generation
             </span>
           </Link>
 
