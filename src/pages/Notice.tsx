@@ -13,22 +13,7 @@ const Notice = () => {
             </h1>
             
             <div className="space-y-8">
-              {/* Test Notice */}
-              <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
-                <div className="flex justify-between items-start mb-4">
-                  <h2 className="text-2xl font-semibold text-foreground">
-                    Testing Notice
-                  </h2>
-                  <span className="text-sm text-muted-foreground">
-                    {new Date().toLocaleDateString()}
-                  </span>
-                </div>
-                <p className="text-foreground/80 leading-relaxed">
-                  This is a test notice to demonstrate the notice board functionality.
-                </p>
-              </div>
-              
-              {/* Welcome Notice */}
+              {/* Notice items will be displayed here */}
               <div className="bg-card border border-border rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-4">
                   <h2 className="text-2xl font-semibold text-foreground">
