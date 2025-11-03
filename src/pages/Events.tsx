@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, MapPin } from "lucide-react";
 
@@ -22,8 +23,9 @@ const Events = () => {
   ];
 
   return (
-    <main className="min-h-screen">
-      <Navigation />
+    <PageTransition>
+      <main className="min-h-screen">
+        <Navigation />
       <div className="pt-20">
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4">
@@ -65,6 +67,7 @@ const Events = () => {
       </div>
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 

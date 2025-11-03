@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -80,8 +81,9 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="min-h-screen">
-      <Navigation />
+    <PageTransition>
+      <main className="min-h-screen">
+        <Navigation />
       <div className="pt-20">
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4">
@@ -168,6 +170,7 @@ const ContactPage = () => {
       </div>
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 

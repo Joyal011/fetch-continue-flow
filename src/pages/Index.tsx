@@ -6,19 +6,22 @@ import Ministries from "@/components/Ministries";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <Stats />
-      <AboutPreview />
-      <Ministries />
-      <Testimonials />
-      <CallToAction />
-      <Footer />
-    </main>
+    <PageTransition>
+      <main className="min-h-screen">
+        <Navigation />
+        <Hero />
+        <Stats />
+        <AboutPreview />
+        <Ministries />
+        <Testimonials />
+        <CallToAction />
+        <Footer />
+      </main>
+    </PageTransition>
   );
 };
 

@@ -1,13 +1,15 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Card } from "@/components/ui/card";
 import missionImage from "@/assets/mission-worship.jpg";
 import valuesImage from "@/assets/values-community.jpg";
 
 const AboutPage = () => {
   return (
-    <main className="min-h-screen">
-      <Navigation />
+    <PageTransition>
+      <main className="min-h-screen">
+        <Navigation />
       <div className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
@@ -227,6 +229,7 @@ const AboutPage = () => {
       </div>
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 

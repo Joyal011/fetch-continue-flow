@@ -1,10 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const Notice = () => {
   return (
-    <main className="min-h-screen">
-      <Navigation />
+    <PageTransition>
+      <main className="min-h-screen">
+        <Navigation />
       <div className="pt-20 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -34,6 +36,7 @@ const Notice = () => {
       </div>
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 

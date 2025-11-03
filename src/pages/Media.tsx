@@ -2,14 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 import { Card } from "@/components/ui/card";
 import youthCampPoster from "@/assets/youth-camp-poster.png";
 const Media = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navigation />
+    <PageTransition>
+      <main className="min-h-screen bg-background">
+        <Navigation />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-b from-primary/10 to-background">
@@ -104,6 +106,7 @@ const Media = () => {
 
       <Footer />
     </main>
+    </PageTransition>
   );
 };
 
