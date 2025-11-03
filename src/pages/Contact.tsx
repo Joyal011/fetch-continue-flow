@@ -157,12 +157,47 @@ const ContactPage = () => {
                   <p className="text-sm text-muted-foreground">– Psalm 145:18</p>
                 </div>
 
-                <div>
-                  <h4 className="font-semibold mb-3">Our Location</h4>
-                  <p className="text-muted-foreground">Chosen Generation at Bishram Church</p>
-                  <p className="text-muted-foreground">Thasikhel, Lalitpur</p>
-                  <p className="text-muted-foreground">M867+FR4, Lalitpur 44700</p>
-                </div>
+                <Card className="p-6 border-none shadow-xl">
+                  <h4 className="font-semibold mb-4 text-xl">Connect With Us</h4>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <h5 className="font-medium mb-2">Location</h5>
+                      <p className="text-muted-foreground">Chosen Generation at Bishram Church</p>
+                      <p className="text-muted-foreground">Thasikhel, Lalitpur</p>
+                      <p className="text-muted-foreground">M867+FR4, Lalitpur 44700</p>
+                    </div>
+
+                    <div className="border-t pt-4">
+                      <h5 className="font-medium mb-3">Follow Us</h5>
+                      <div className="space-y-3">
+                        <a 
+                          href="https://www.instagram.com/chosengeneration.nepal"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                        >
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span className="text-lg">📷</span>
+                          </div>
+                          <span className="font-medium">Instagram: @chosengeneration.nepal</span>
+                        </a>
+                        
+                        <a 
+                          href="https://www.facebook.com/profile.php?id=100090456807762"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
+                        >
+                          <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                            <span className="text-lg">📘</span>
+                          </div>
+                          <span className="font-medium">Facebook: Chosen Generation</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
