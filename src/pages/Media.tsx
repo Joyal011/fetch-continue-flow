@@ -20,7 +20,7 @@ const Media = () => {
             Media Gallery
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Capturing moments of faith, fellowship, and worship at Bishram Church
+            Capturing moments of faith, fellowship, and worship in our community
           </p>
         </div>
       </section>

@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Chosen Generation</h3>
             <p className="text-foreground/80 mb-4">
-              The youth ministry of Bishram Church - empowering the next generation through faith and fellowship.
+              A vibrant youth ministry empowering the next generation through faith, unity, and fellowship.
             </p>
             <p className="text-sm text-foreground/70 italic">
               "Let no one despise you for your youth, but set the believers an example." - 1 Timothy 4:12

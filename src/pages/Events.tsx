@@ -17,7 +17,7 @@ const Events = () => {
       title: "Saturday Worship Service",
       date: "Every Saturday",
       time: "10:00 AM",
-      location: "Bishram Church, Thasikhel",
+      location: "Thasikhel, Lalitpur",
       description: "Join us every Saturday for worship, prayer, and biblical teaching."
     }
   ];

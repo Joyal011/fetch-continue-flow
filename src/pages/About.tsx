@@ -32,10 +32,10 @@ const AboutPage = () => {
                   Our Mission
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Chosen Generation is the vibrant youth ministry of Bishram Church, dedicated to 
+                  Chosen Generation is a vibrant youth ministry dedicated to 
                   empowering the next generation to live bold, faith-filled lives. We create a 
                   dynamic space where young people can encounter God, build authentic relationships, 
-                  and discover their purpose.
+                  and discover their purpose in a welcoming community.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Through worship, Bible study, community service, and fellowship, we equip youth 

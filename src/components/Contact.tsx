@@ -59,7 +59,7 @@ const Contact = () => {
         <div className="mb-16">
           <div className="max-w-4xl mx-auto mb-8 text-center">
             <h3 className="text-2xl font-semibold mb-2">Our Location</h3>
-            <p className="text-lg text-muted-foreground">Chosen Generation at Bishram Church, Thasikhel, Lalitpur</p>
+            <p className="text-lg text-muted-foreground">Chosen Generation, Thasikhel, Lalitpur</p>
             <p className="text-sm text-muted-foreground">M867+FR4, Lalitpur 44700</p>
           </div>
           <div className="max-w-5xl mx-auto animate-fade-up">
@@ -72,7 +72,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Chosen Generation at Bishram Church - Thasikhel, Lalitpur"
+                title="Chosen Generation - Thasikhel, Lalitpur"
               />
             </div>
             <div className="text-center mt-4">

@@ -32,7 +32,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm mb-4">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="font-medium">Youth Ministry of Bishram Church</span>
+            <span className="font-medium">Youth Ministry & Fellowship</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">

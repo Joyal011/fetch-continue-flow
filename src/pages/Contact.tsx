@@ -163,7 +163,7 @@ const ContactPage = () => {
                   <div className="space-y-4">
                     <div>
                       <h5 className="font-medium mb-2">Location</h5>
-                      <p className="text-muted-foreground">Chosen Generation at Bishram Church</p>
+                      <p className="text-muted-foreground">Chosen Generation</p>
                       <p className="text-muted-foreground">Thasikhel, Lalitpur</p>
                       <p className="text-muted-foreground">M867+FR4, Lalitpur 44700</p>
                     </div>
