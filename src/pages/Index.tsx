@@ -5,6 +5,7 @@ import Stats from "@/components/Stats";
 import Ministries from "@/components/Ministries";
 import ScriptureHighlight from "@/components/ScriptureHighlight";
 import Testimonials from "@/components/Testimonials";
+import Newsletter from "@/components/Newsletter";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
@@ -20,6 +21,7 @@ const Index = () => {
         <Ministries />
         <ScriptureHighlight />
         <Testimonials />
+        <Newsletter />
         <CallToAction />
         <Footer />
       </main>

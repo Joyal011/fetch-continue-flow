@@ -42,13 +42,21 @@ const Ministries = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Floating background elements */}
+      <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-40 left-10 w-80 h-80 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }} />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm mb-4">
+            <Sparkles className="w-4 h-4" />
+            <span className="font-medium">Our Ministries</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">We Do</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Discover the various ways we nurture faith, build community, and empower youth to live purposefully
           </p>
         </div>
