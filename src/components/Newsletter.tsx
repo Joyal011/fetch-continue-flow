@@ -3,24 +3,49 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      setIsSubmitted(true);
-      toast({
-        title: "Thanks for subscribing! 🎉",
-        description: "You'll receive updates about our events and activities.",
-      });
-      setTimeout(() => {
-        setEmail("");
-        setIsSubmitted(false);
-      }, 3000);
+      setIsLoading(true);
+      try {
+        await emailjs.send(
+          "service_xmj1h5f", // EmailJS Service ID
+          "template_5v1n4ib", // EmailJS Template ID
+          {
+            to_email: email,
+            from_name: "Chosen Generation",
+            message: "Thank you for subscribing to our newsletter!",
+          },
+          "kZVDVKLdYvKslPL5b" // EmailJS Public Key
+        );
+        
+        setIsSubmitted(true);
+        toast({
+          title: "Thanks for subscribing! 🎉",
+          description: "You'll receive updates about our events and activities.",
+        });
+        setTimeout(() => {
+          setEmail("");
+          setIsSubmitted(false);
+        }, 3000);
+      } catch (error) {
+        console.error("Newsletter subscription error:", error);
+        toast({
+          title: "Subscription failed",
+          description: "Please try again later.",
+          variant: "destructive",
+        });
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -61,8 +86,9 @@ const Newsletter = () => {
                   type="submit"
                   size="lg"
                   className="h-14 px-8 font-semibold whitespace-nowrap"
+                  disabled={isLoading}
                 >
-                  Subscribe
+                  {isLoading ? "Subscribing..." : "Subscribe"}
                   <Send className="w-5 h-5 ml-2" />
                 </Button>
               </div>
