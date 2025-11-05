@@ -13,7 +13,7 @@ const CallToAction = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${communityImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-accent/95" />
+        <div className="absolute inset-0 bg-secondary/98" />
       </div>
 
       {/* Decorative light rays */}
