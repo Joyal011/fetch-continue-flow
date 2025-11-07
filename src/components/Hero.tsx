@@ -36,13 +36,13 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
-            Chosen Generation
+            Chosen to Shine, Called to Lead
           </h1>
           <p className="text-2xl md:text-4xl lg:text-5xl text-white mb-8 max-w-4xl mx-auto font-light drop-shadow-lg leading-tight">
-            A Place of Peace, Faith, and Fellowship
+            Empowering Christian Youth to Live with Purpose
           </p>
           <p className="text-lg md:text-xl lg:text-2xl text-white/95 mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
-            We are a youth ministry dedicated to faith, unity, and purpose — building a community where hope thrives.
+            Join our vibrant community of young believers growing in faith, building lasting friendships, and making a difference in the world together.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
