@@ -7,7 +7,7 @@ const CallToAction = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-16 sm:py-20 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center"
@@ -24,33 +24,33 @@ const CallToAction = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white animate-fade-up drop-shadow-lg md:drop-shadow-xl rounded-2xl bg-secondary/30 backdrop-blur-md p-6 md:p-10">
+        <div className="max-w-4xl mx-auto text-center text-white animate-fade-up drop-shadow-lg md:drop-shadow-xl rounded-2xl bg-secondary/30 backdrop-blur-md p-6 sm:p-8 md:p-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white text-sm mb-6">
             <Sparkles className="w-4 h-4" />
             <span className="font-medium">Join the Movement</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
             Become Part of Our Community
           </h2>
-          <p className="text-xl md:text-2xl mb-6 text-white/95 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6 text-white/95 max-w-2xl mx-auto leading-relaxed">
             You're invited to be part of something extraordinary — a place where faith comes alive
           </p>
-          <p className="text-lg mb-10 text-white/90 max-w-2xl mx-auto italic font-serif">
+          <p className="text-base sm:text-lg mb-8 sm:mb-10 text-white/90 max-w-2xl mx-auto italic font-serif">
             "For where two or three gather in my name, there am I with them." — Matthew 18:20
           </p>
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center">
             <Button
               size="lg"
               variant="secondary"
-              className="text-lg px-12 py-8 font-bold shadow-elevated"
+              className="text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 font-bold shadow-elevated w-full sm:w-auto min-h-[56px]"
               onClick={() => navigate("/events")}
             >
               View Upcoming Events
             </Button>
             <Button
               size="lg"
-              className="text-lg px-12 py-8 font-bold bg-white text-secondary hover:bg-white/90 shadow-elevated"
+              className="text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 font-bold bg-white text-secondary hover:bg-white/90 shadow-elevated w-full sm:w-auto min-h-[56px]"
               onClick={() => navigate("/contact")}
             >
               Connect With Us

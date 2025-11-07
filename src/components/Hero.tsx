@@ -35,20 +35,20 @@ const Hero = () => {
             <span className="font-medium">Youth Ministry & Fellowship</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 text-white drop-shadow-2xl leading-tight px-4">
             Chosen to Shine, Called to Lead
           </h1>
-          <p className="text-2xl md:text-4xl lg:text-5xl text-white mb-8 max-w-4xl mx-auto font-light drop-shadow-lg leading-tight">
+          <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white mb-4 sm:mb-8 max-w-4xl mx-auto font-light drop-shadow-lg leading-tight px-4">
             Empowering Christian Youth to Live with Purpose
           </p>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/95 mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-8 sm:mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed px-4">
             Join our vibrant community of young believers growing in faith, building lasting friendships, and making a difference in the world together.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center px-4 w-full sm:w-auto">
             <Button
               size="lg"
-              className="text-lg px-14 py-8 font-bold shadow-glow bg-primary text-primary-foreground hover:shadow-[0_0_80px_hsl(45_95%_55%/0.6)]"
+              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 font-bold shadow-glow bg-primary text-primary-foreground hover:shadow-[0_0_80px_hsl(45_95%_55%/0.6)] w-full sm:w-auto min-h-[56px]"
               onClick={() => navigate("/contact")}
             >
               Join Our Community
@@ -56,7 +56,7 @@ const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="text-lg px-14 py-8 font-bold bg-white/15 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-divine"
+              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 font-bold bg-white/15 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-divine w-full sm:w-auto min-h-[56px]"
               onClick={() => navigate("/about")}
             >
               Discover More

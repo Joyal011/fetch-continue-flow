@@ -84,23 +84,23 @@ const ContactPage = () => {
     <PageTransition>
       <main className="min-h-screen">
         <Navigation />
-      <div className="pt-20">
-        <section className="py-20 md:py-32">
+      <div className="pt-20 sm:pt-24">
+        <section className="py-12 sm:py-20 md:py-32">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16 animate-fade-up">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <div className="text-center mb-12 sm:mb-16 animate-fade-up">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
                 Contact Us
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
                 We'd love to hear from you! Send us a message or visit us.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
               <Card className="animate-fade-up border-none shadow-xl">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                <CardContent className="p-6 sm:p-8">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-6">Send us a Message</h3>
+                  <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Your Name
@@ -111,7 +111,7 @@ const ContactPage = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full"
+                        className="w-full h-12 text-base"
                       />
                     </div>
                     <div>
@@ -125,7 +125,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="w-full"
+                        className="w-full h-12 text-base"
                       />
                     </div>
                     <div>
@@ -139,26 +139,26 @@ const ContactPage = () => {
                         onChange={handleChange}
                         placeholder="How can we help you?"
                         rows={5}
-                        className="w-full"
+                        className="w-full text-base min-h-[120px]"
                       />
                     </div>
-                    <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                    <Button type="submit" className="w-full min-h-[56px] text-base" size="lg" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>
               </Card>
 
-              <div className="animate-fade-up space-y-8" style={{ animationDelay: "0.2s" }}>
-                <div className="bg-secondary/50 rounded-2xl p-8">
-                  <p className="text-muted-foreground italic mb-4">
+              <div className="animate-fade-up space-y-6 sm:space-y-8" style={{ animationDelay: "0.2s" }}>
+                <div className="bg-secondary/50 rounded-2xl p-6 sm:p-8">
+                  <p className="text-muted-foreground italic mb-3 sm:mb-4 text-sm sm:text-base">
                     "The Lord is near to all who call on him, to all who call on him in truth."
                   </p>
-                  <p className="text-sm text-muted-foreground">– Psalm 145:18</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">– Psalm 145:18</p>
                 </div>
 
-                <Card className="p-6 border-none shadow-xl">
-                  <h4 className="font-semibold mb-4 text-xl">Connect With Us</h4>
+                <Card className="p-5 sm:p-6 border-none shadow-xl">
+                  <h4 className="font-semibold mb-4 text-lg sm:text-xl">Connect With Us</h4>
                   
                   <div className="space-y-4">
                     <div>

@@ -50,7 +50,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-10 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
@@ -60,47 +60,47 @@ const Newsletter = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-primary to-secondary mb-6 animate-glow">
-              <Mail className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r from-primary to-secondary mb-4 sm:mb-6 animate-glow">
+              <Mail className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">
               Stay <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Connected</span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-4">
               Subscribe to receive updates about upcoming events, inspiring stories, and opportunities to grow in faith with our community
             </p>
           </div>
 
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl mx-auto px-4">
                 <Input
                   type="email"
-                  placeholder="Enter your email address"
+                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-14 text-lg px-6 bg-background/80 backdrop-blur-sm border-2 border-primary/20 focus:border-primary"
+                  className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-6 bg-background/80 backdrop-blur-sm border-2 border-primary/20 focus:border-primary"
                   required
                 />
                 <Button 
                   type="submit"
                   size="lg"
-                  className="h-14 px-8 font-semibold whitespace-nowrap"
+                  className="h-12 sm:h-14 px-6 sm:px-8 font-semibold whitespace-nowrap w-full sm:w-auto"
                   disabled={isLoading}
                 >
                   {isLoading ? "Subscribing..." : "Subscribe"}
-                  <Send className="w-5 h-5 ml-2" />
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4 px-4">
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </form>
           ) : (
-            <div className="animate-fade-up flex flex-col items-center justify-center py-8">
-              <CheckCircle2 className="w-16 h-16 text-primary mb-4 animate-pulse" />
-              <p className="text-2xl font-semibold text-foreground">Thank you for subscribing!</p>
-              <p className="text-muted-foreground mt-2">Check your email for confirmation.</p>
+            <div className="animate-fade-up flex flex-col items-center justify-center py-6 sm:py-8 px-4">
+              <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-primary mb-3 sm:mb-4 animate-pulse" />
+              <p className="text-xl sm:text-2xl font-semibold text-foreground">Thank you for subscribing!</p>
+              <p className="text-sm sm:text-base text-muted-foreground mt-2">Check your email for confirmation.</p>
             </div>
           )}
         </div>
