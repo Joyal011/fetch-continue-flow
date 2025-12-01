@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
@@ -142,9 +142,12 @@ const ContactPage = () => {
                         className="w-full text-base min-h-[120px]"
                       />
                     </div>
-                    <Button type="submit" className="w-full min-h-[56px] text-base" size="lg" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
+                    <InteractiveHoverButton 
+                      type="submit" 
+                      text={isSubmitting ? "Sending..." : "Send Message"} 
+                      className="w-full min-h-[56px] text-base min-w-[180px]" 
+                      disabled={isSubmitting}
+                    />
                   </form>
                 </CardContent>
               </Card>
