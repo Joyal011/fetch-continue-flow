@@ -12,6 +12,10 @@ All colors MUST be HSL.
     --background: 210 40% 98%;
     --foreground: 220 20% 15%;
 
+    /* Brand colors for glow effects */
+    --brand: 45 95% 55%;
+    --brand-foreground: 48 100% 65%;
+
     --card: 0 0% 100%;
     --card-foreground: 220 20% 15%;
 
@@ -68,6 +72,10 @@ All colors MUST be HSL.
   .dark {
     --background: 220 30% 8%;
     --foreground: 210 30% 96%;
+
+    /* Brand colors for glow effects */
+    --brand: 48 100% 65%;
+    --brand-foreground: 45 95% 55%;
 
     --card: 220 25% 10%;
     --card-foreground: 210 30% 96%;
@@ -221,5 +229,18 @@ All colors MUST be HSL.
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+  .delay-1000 {
+    animation-delay: 1000ms;
   }
 }
