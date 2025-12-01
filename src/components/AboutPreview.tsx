@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
 import { Target, Eye, Heart, Sparkles } from "lucide-react";
 import missionImage from "@/assets/mission-worship.jpg";
@@ -70,14 +70,11 @@ const AboutPreview = () => {
           </div>
 
           <div className="text-center animate-fade-up" style={{ animationDelay: "0.6s" }}>
-            <Button
-              size="lg"
+            <InteractiveHoverButton
+              text="Discover Our Story"
               onClick={() => navigate("/about")}
-              className="font-semibold group"
-            >
-              Discover Our Story
-              <Sparkles className="w-4 h-4 ml-2 group-hover:rotate-12 transition-transform" />
-            </Button>
+              className="min-w-[200px] h-14 text-lg"
+            />
           </div>
         </div>
       </div>

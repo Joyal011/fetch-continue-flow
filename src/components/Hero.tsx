@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/chosen-generation-hero.jpg";
 
@@ -46,21 +47,16 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center px-4 w-full sm:w-auto">
-            <Button
-              size="lg"
-              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 font-bold shadow-glow bg-primary text-primary-foreground hover:shadow-[0_0_80px_hsl(45_95%_55%/0.6)] w-full sm:w-auto min-h-[56px]"
+            <InteractiveHoverButton
+              text="Join Our Community"
+              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 shadow-glow bg-primary text-primary-foreground hover:shadow-[0_0_80px_hsl(45_95%_55%/0.6)] w-full sm:w-auto min-h-[56px] min-w-[220px]"
               onClick={() => navigate("/contact")}
-            >
-              Join Our Community
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 font-bold bg-white/15 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-divine w-full sm:w-auto min-h-[56px]"
+            />
+            <InteractiveHoverButton
+              text="Discover More"
+              className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 bg-white/15 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/25 hover:border-white/60 shadow-divine w-full sm:w-auto min-h-[56px] min-w-[200px]"
               onClick={() => navigate("/about")}
-            >
-              Discover More
-            </Button>
+            />
           </div>
         </div>
       </div>
