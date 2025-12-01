@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 import communityImage from "@/assets/footer-bg.jpg";
@@ -49,11 +48,13 @@ const CallToAction = () => {
             >
               View Upcoming Events
             </Button>
-            <InteractiveHoverButton
-              text="Connect With Us"
-              className="text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 bg-white text-secondary hover:bg-white/90 shadow-elevated w-full sm:w-auto min-h-[56px] min-w-[200px]"
+            <Button
+              size="lg"
+              className="text-base sm:text-lg px-8 sm:px-12 py-6 sm:py-8 font-bold bg-white text-secondary hover:bg-white/90 shadow-elevated w-full sm:w-auto min-h-[56px]"
               onClick={() => navigate("/contact")}
-            />
+            >
+              Connect With Us
+            </Button>
           </div>
         </div>
       </div>

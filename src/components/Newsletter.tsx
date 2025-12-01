@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { Mail, Send, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
@@ -82,12 +82,15 @@ const Newsletter = () => {
                   className="h-12 sm:h-14 text-base sm:text-lg px-4 sm:px-6 bg-background/80 backdrop-blur-sm border-2 border-primary/20 focus:border-primary"
                   required
                 />
-                <InteractiveHoverButton 
+                <Button 
                   type="submit"
-                  text={isLoading ? "Subscribing..." : "Subscribe"}
-                  className="h-12 sm:h-14 px-6 sm:px-8 whitespace-nowrap w-full sm:w-auto min-w-[140px]"
+                  size="lg"
+                  className="h-12 sm:h-14 px-6 sm:px-8 font-semibold whitespace-nowrap w-full sm:w-auto"
                   disabled={isLoading}
-                />
+                >
+                  {isLoading ? "Subscribing..." : "Subscribe"}
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                </Button>
               </div>
               <p className="text-xs sm:text-sm text-muted-foreground mt-3 sm:mt-4 px-4">
                 We respect your privacy. Unsubscribe at any time.
