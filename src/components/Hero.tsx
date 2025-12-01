@@ -41,11 +41,11 @@ const Hero = () => {
           <p className="text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white mb-4 sm:mb-8 max-w-4xl mx-auto font-light drop-shadow-lg leading-tight px-4">
             Empowering Christian Youth to Live with Purpose
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-8 sm:mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/95 mb-8 sm:mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed px-4 animate-appear opacity-0 delay-100">
             Join our vibrant community of young believers growing in faith, building lasting friendships, and making a difference in the world together.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center px-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center px-4 w-full sm:w-auto animate-appear opacity-0 delay-300">
             <Button
               size="lg"
               className="text-base sm:text-lg px-8 sm:px-14 py-6 sm:py-8 font-bold shadow-glow bg-primary text-primary-foreground hover:shadow-[0_0_80px_hsl(45_95%_55%/0.6)] w-full sm:w-auto min-h-[56px]"
