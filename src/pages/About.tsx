@@ -195,7 +195,7 @@ const AboutPage = () => {
                     <p className="text-lg font-semibold text-foreground">Jenisha Shrestha</p>
                   </Card>
                   <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
-                    <p className="text-lg font-semibold text-foreground">Ester Ruchal</p>
+                    <p className="text-lg font-semibold text-foreground">Esther Ruchal</p>
                   </Card>
                   <Card className="p-6 bg-card hover:shadow-lg transition-shadow text-center">
                     <p className="text-lg font-semibold text-foreground">Surakshya Thapa Magar</p>
