@@ -90,29 +90,29 @@ export function AnimatedTestimonials({
   }
 
   return (
-    <section ref={sectionRef} id="testimonials" className={`py-24 overflow-hidden bg-muted/30 ${className || ""}`}>
-      <div className="px-4 md:px-6">
+    <section ref={sectionRef} id="testimonials" className={`py-12 md:py-24 overflow-hidden bg-muted/30 ${className || ""}`}>
+      <div className="px-4 md:px-6 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
           animate={controls}
           variants={containerVariants}
-          className="grid grid-cols-1 gap-16 w-full md:grid-cols-2 lg:gap-24"
+          className="grid grid-cols-1 gap-8 md:gap-16 w-full md:grid-cols-2 lg:gap-24"
         >
           {/* Left side: Heading and navigation */}
-          <motion.div variants={itemVariants} className="flex flex-col justify-center">
-            <div className="space-y-6">
+          <motion.div variants={itemVariants} className="flex flex-col justify-center text-center md:text-left">
+            <div className="space-y-4 md:space-y-6">
               {badgeText && (
-                <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
+                <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary mx-auto md:mx-0">
                   <Star className="mr-1 h-3.5 w-3.5 fill-primary" />
                   <span>{badgeText}</span>
                 </div>
               )}
 
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{title}</h2>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">{title}</h2>
 
-              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">{subtitle}</p>
+              <p className="max-w-[600px] text-muted-foreground text-base md:text-xl/relaxed mx-auto md:mx-0">{subtitle}</p>
 
-              <div className="flex items-center gap-3 pt-4">
+              <div className="flex items-center gap-3 pt-2 md:pt-4 justify-center md:justify-start">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -128,7 +128,7 @@ export function AnimatedTestimonials({
           </motion.div>
 
           {/* Right side: Testimonial cards */}
-          <motion.div variants={itemVariants} className="relative h-full mr-10 min-h-[300px] md:min-h-[400px]">
+          <motion.div variants={itemVariants} className="relative h-full min-h-[320px] md:min-h-[400px] mx-4 md:mr-10 md:mx-0">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
@@ -142,7 +142,7 @@ export function AnimatedTestimonials({
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 style={{ zIndex: activeIndex === index ? 10 : 0 }}
               >
-                <div className="bg-card border shadow-lg rounded-xl p-8 h-full flex flex-col">
+                <div className="bg-card border shadow-lg rounded-xl p-5 md:p-8 h-full flex flex-col">
                   <div className="mb-6 flex gap-2">
                     {Array(testimonial.rating)
                       .fill(0)
