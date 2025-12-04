@@ -44,7 +44,7 @@ const Notice = () => {
                   >
                     <div className="flex justify-between items-start mb-4">
                       <h2 className="text-2xl font-semibold text-foreground">
-                        {notice.Title}
+                        {notice.title}
                       </h2>
                       {notice.date && (
                         <span className="text-sm text-muted-foreground whitespace-nowrap ml-4">
@@ -56,14 +56,16 @@ const Notice = () => {
                       <div className="mb-4 rounded-lg overflow-hidden">
                         <img
                           src={notice.image}
-                          alt={notice.Title}
+                          alt={notice.title}
                           className="w-full h-auto object-cover"
                         />
                       </div>
                     )}
-                    <p className="text-foreground/80 leading-relaxed whitespace-pre-wrap">
-                      {notice.Description}
-                    </p>
+                    {notice.description && (
+                      <p className="text-foreground/80 leading-relaxed whitespace-pre-wrap">
+                        {notice.description}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
