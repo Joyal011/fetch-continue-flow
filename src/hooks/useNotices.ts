@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, query, orderBy, onSnapshot, Timestamp } from "firebase/firestore";
+import { collection, query, onSnapshot, Timestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
 export interface Notice {
@@ -18,7 +18,8 @@ export const useNotices = () => {
 
   useEffect(() => {
     const noticesRef = collection(db, "notices");
-    const q = query(noticesRef, orderBy("createdAt", "desc"));
+    // Don't use orderBy to avoid requiring createdAt field
+    const q = query(noticesRef);
 
     const unsubscribe = onSnapshot(
       q,
