@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+import { collection, query, orderBy, onSnapshot, Timestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
 export interface Notice {
@@ -8,7 +8,7 @@ export interface Notice {
   content: string;
   date: string;
   image?: string;
-  createdAt?: any;
+  createdAt?: Timestamp;
 }
 
 export const useNotices = () => {
@@ -23,7 +23,7 @@ export const useNotices = () => {
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
-        const noticesData: Notice[] = snapshot.docs.map((doc) => ({
+        const noticesData = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         })) as Notice[];
