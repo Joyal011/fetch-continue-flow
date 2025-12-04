@@ -4,8 +4,8 @@ import { db } from "@/lib/firebase";
 
 export interface Notice {
   id: string;
-  Title: string;
-  Description: string;
+  title: string;
+  description?: string;
   date?: string;
   image?: string;
   createdAt?: Timestamp;
