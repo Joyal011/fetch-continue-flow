@@ -37,7 +37,7 @@ const Testimonials = () => {
       subtitle="Hear from youth whose lives have been impacted by God's work in our community"
       badgeText="Real Stories"
       testimonials={testimonials}
-      autoRotateInterval={6000}
+      autoRotateInterval={4000}
     />
   );
 };
