@@ -24,10 +24,15 @@ export const useNotices = () => {
     const unsubscribe = onSnapshot(
       q,
       (snapshot) => {
+        console.log("Firebase snapshot received:", snapshot.size, "documents");
+        snapshot.docs.forEach((doc) => {
+          console.log("Document ID:", doc.id, "Data:", doc.data());
+        });
         const noticesData = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         })) as Notice[];
+        console.log("Processed notices:", noticesData);
         setNotices(noticesData);
         setLoading(false);
       },
